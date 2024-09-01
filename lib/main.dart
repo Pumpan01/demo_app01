@@ -1,4 +1,3 @@
-import 'package:demo_app01/bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +9,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Appbars();
+    return MaterialApp(
+      title: 'ตัวอย่าง Flutter',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue, // เปลี่ยนเป็นสีน้ำเงินเพื่อมองดูใหม่
+          brightness: Brightness.light,
+        ),
+        useMaterial3: true,
+        textTheme: const TextTheme(
+          headlineMedium: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      home: const MyHomePage(title: 'ตัวอย่างหน้าแรก Flutter ปุ่มสวยๆ'),
+    );
   }
 }
 
